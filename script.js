@@ -1,19 +1,28 @@
-function name(){
-  let name = "Andrea";
-  let surname = "Borelli";
-  let names = name + " " + surname;
-    console.log(names);
-  }
-  name()
+/* template literals: sono la possibilità 
+di inserire all'interno di una stringa un'espressione */
 
-  
-const obj = {id: 123, name: "Andrea"}
+const age = 40;
+// const a = 'hello Andrea' + ' ' + (1+1) + ' ' + age;
 
-obj.id = 909090
-obj.colore ="red";
+const a = `hello Andrea (${1+1}) ${age}`
 
-console.log(obj);
+// const url = `${API}/${endpoint}/${id}` // es. molto più leggibile,invece di avere / '+' ecc..
 
-let data = [10, 20, 30, 40];
-data = data.concat([50, 60, 70, 80])
-console.log(data);
+/* con i backtick la stringa può essere anche multiline, 
+e l'output corrisponte a quanto scritto, 
+molto comodo perchè in contesti come angular 
+es. usando i backtick in template in typescript: `
+    <h1>
+      Hello world!
+    </h1>
+  `;  */
+
+const name = `
+	hello 
+		Andrea 
+		(${1+1}) 
+	${age}`
+
+console.log(a);
+
+console.log(name);
