@@ -1,28 +1,27 @@
-/* template literals: sono la possibilità 
-di inserire all'interno di una stringa un'espressione */
+/* Short Object syntax: la possibilità di creare oggetti 
+con una sintassi molto più coincisa */
 
-const age = 40;
-// const a = 'hello Andrea' + ' ' + (1+1) + ' ' + age;
+const user = {
+  id: 123,
+  name: 'Andrea',
+  surname: 'Borelli',
+  profile: {
+    color: 'blue',
+    location: 'Genova'
+  }
 
-const a = `hello Andrea (${1+1}) ${age}`
+};
 
-// const url = `${API}/${endpoint}/${id}` // es. molto più leggibile,invece di avere / '+' ecc..
+/* const params = {
+	id: user.id, // recupera valori da user
+  	color: user.profile.color
+} */
 
-/* con i backtick la stringa può essere anche multiline, 
-e l'output corrisponte a quanto scritto, 
-molto comodo perchè in contesti come angular 
-es. usando i backtick in template in typescript: `
-    <h1>
-      Hello world!
-    </h1>
-  `;  */
 
-const name = `
-	hello 
-		Andrea 
-		(${1+1}) 
-	${age}`
+const id = user.id
+const color = user.profile.color
 
-console.log(a);
+const params = { id, color }
 
-console.log(name);
+// scambio dati server ajax
+console.log(params);
