@@ -32,7 +32,7 @@ Exercises from the Javascript ES6 and TypeScript Fundamentals course - part of t
    code .
 ## Usage
 
-you can test the code to do exercises by going to: [ES6 playground](https://demo.fabiobiondi.io/es6playground/)
+you can test the code to do exercises by going to: [ES6 playground](https://demo.fabiobiondi.io/es6playground/) by [Fabio Biondi](https://www.fabiobiondi.dev/)
 
 ## License
 Distributed under the MIT License. See LICENSE for more information.
