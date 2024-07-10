@@ -4,20 +4,12 @@ Exercises from the Javascript ES6 and TypeScript Fundamentals course - part of t
 
 ## Features
 
-- **Angular &. TypeScript Essentials**
-- **Signals**
-- **Control Flow Syntax e Signals**
-- **Standalone Components Fundamentals**
-- **Reusable Components**
-- **Router e MultiView Applications**
-- **HttpClient e REST API**
-- **Refactoring**
-- **State Management con Signals e Dependency Injection**
-- **Deploy** da vedere
-- **Deferrable Views**
-- **Autenticazione con Auth0**
-- **Component Testing con Cypress**
-- **Angular SSR**
+- **var vs let - Block Scope vs Function Scope**
+- **Le costanti: const - Mutabilità vs Immutabilità**
+- **Template literals: stringhe multiline con espressioni**
+- **Short Object syntax**
+- **Destructuring Array**
+- 
 
 ### Steps
 
