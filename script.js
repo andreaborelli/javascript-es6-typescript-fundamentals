@@ -1,33 +1,46 @@
-/* il Destructuring Array o destrutturazione 
-è una nuova espressione introdotta in javascript ES6 
-per estrarre da array o da oggetti dei valori rispettivamente 
-o delle proprietà creando delle nuove variabili 
-che conterranno tali valori */
 
-const list = [10, 20, 30, 40, 50];
+const user = {
+  first: 'Andrea',
+  last: 'Borelli',
+  // preference: 'red' // se decommento vedo red
+}; 
 
-// const [a, b, c, d, e = 50] = list; // ad variabile e assegno un dato di default
+//console.log(`${user.first}  (${user.last})`);
 
-//const [a, b] = list;
+// per path più lunghi
+// const first = user.first;
+// const last = user.last;
+// riduce la complessità, aumentando la leggibilità
 
-const [a, b, ...rest] = list; /* con destructuring invece di utilizzare il nome della costante 
-						direttamente subito dopo const, utilizzeremo le parentesi quadre 
-                        per indicare che stiamo facendo il destructuring di un array, 
-                        creando delle variabili a, e b, 
-                        dove a sarà assegnato automaticamente al primo valore dell'array, 
-                        e b al secondo valore dell'array, 
-                        semplicemente scrivendo il segno = 
-                        e definendo l'oggetto, list
-                        in questo caso l'array che vogliamo estrapolare tali proprietà
-                        sintassi più pulita */
-/* non sapendo la lunghezza dell'array, impostiamo i primi due valori, 
-è aggiungendo lo spread operator aggiungendo ... 
-con il nome di un ulteriore proprietà che potremmo chiamare come vogliamo es ...rest 
-così facendo recupereremo i valori rimanenti successivi ai primi 2 array */
 
-// const a = list[0];
-// console.log(list[0]);
-// console.log(a);
-//console.log(a, b, c, d, e );
-//console.log(a, b, );
-console.log(a, b, rest );
+/* con destructuring object quali proprietà estrapolare 
+es. first e last, è da dove vogliamo 
+e da dove vogliamo estrarre tali proprietà es dall'oggetto user */
+
+// const {first, last} = user; // una sola riga per definire due espressioni
+
+// console.log(`${first} (${last})`); 
+
+/* possiamo anche effettuare il rename di una proprietà
+*/
+
+// const {first: f, last: l, preference} = user;
+
+
+// let { first: f, last: l, preference } = user;
+
+
+/* impostare default preference con not ! cioè 
+che non sia impostato gestione di tutti i casi*/
+
+/*if (!preference) { questo blocco agisce solo quando la condizione è false cioè non esiste una preference
+  preference = 'Black';
+} */
+
+
+/* sintassi più moderna reale */
+
+let { first: f, preference: pref = 'black' } = user; // agisce solo quando la condizione è false cioè non esiste una preference
+
+console.log(`${f} (${pref})`); 
+
