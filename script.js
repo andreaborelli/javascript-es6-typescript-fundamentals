@@ -1,46 +1,23 @@
+// oggetto che contiene diveri nodi al suo interno
+// Destructuring - Nested - nidificato
 
 const user = {
-  first: 'Andrea',
-  last: 'Borelli',
-  // preference: 'red' // se decommento vedo red
-}; 
+	name: 'Andrea',
+    surname: 'Borelli',
+  	profile: {
+    	color: 'red',
+      	location: {
+			lat: 15, lng: 12
+		}, 
+    }
+};
 
-//console.log(`${user.first}  (${user.last})`);
+const { 
+  profile: { 
+    location: {
+      lat, lng, zoom = 5  // nuovo valoe zoom, settiamo un nuovo valore di deafault
+    } 
+  } 
+} = user; // destruttura da profile una sotto proprietà, es. location
 
-// per path più lunghi
-// const first = user.first;
-// const last = user.last;
-// riduce la complessità, aumentando la leggibilità
-
-
-/* con destructuring object quali proprietà estrapolare 
-es. first e last, è da dove vogliamo 
-e da dove vogliamo estrarre tali proprietà es dall'oggetto user */
-
-// const {first, last} = user; // una sola riga per definire due espressioni
-
-// console.log(`${first} (${last})`); 
-
-/* possiamo anche effettuare il rename di una proprietà
-*/
-
-// const {first: f, last: l, preference} = user;
-
-
-// let { first: f, last: l, preference } = user;
-
-
-/* impostare default preference con not ! cioè 
-che non sia impostato gestione di tutti i casi*/
-
-/*if (!preference) { questo blocco agisce solo quando la condizione è false cioè non esiste una preference
-  preference = 'Black';
-} */
-
-
-/* sintassi più moderna reale */
-
-let { first: f, preference: pref = 'black' } = user; // agisce solo quando la condizione è false cioè non esiste una preference
-
-console.log(`${f} (${pref})`); 
-
+console.log(lat, lng, zoom );
