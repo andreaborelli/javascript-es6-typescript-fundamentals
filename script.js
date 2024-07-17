@@ -1,44 +1,28 @@
-// il rename è utile perchè ci permette di rinominare una variabile in un'altra variabile// rename & short object syntax
+/* lo spread operator è una nuova funzionalità 
+offerta da ES6 ed è rappresentata 
+da 3 punti uno dietro l'altro ... 
+è funziona sia con gli array che con gli oggetti*/
 
-const user = {
-	name: 'Andrea',
-    surname: 'Borelli',
-  	profile: {
-    	color: 'red',
-      	location: {
-			lat: 15, lng: 12
-		}, 
-    }
-};
+// const data = [1, 2, 3, 4];
 
-const { 
-  profile: { 
-    location: {
-      lat: lt, lng: lg, zoom = 5  // nuovo valoe zoom, settiamo un nuovo valore di deafault
-    } 
-  } 
-} = user; // destruttura da profile una sotto proprietà, es. location
+// const result = [data];
 
 
-const params = { lt, lg, zoom } 
+const data = [1, 2, 3, 4];
 
-	// lt, // rimuoviamo : lt
-  	// lg,	// rimuoviamo : lg
-  	// zoom // rimuoviamo : zoom
- /* short object syntax è possibile andare ad eliminare la parte in eccedenza 
-nel momento in cui chiave e valore hanno lo stesso nome quindi nel caso in cui lt ed lg
-coincidano possiamo rimuoverne uno dei due */
+const list = [5, 6];
 
-// ajax
+// al posto di usare push, usiamo concat data.push();
 
-console.log(params);
+// const result = data.concat([5]); 
+/* data.concat([5]); questo meccanismo ci permette di sfruttare 
+anche il concetto di immutabilità soprattutto in framework 
+come Angular e React */
 
-/* 
-output:
+// const cloned =[...data, ...list, 7, 8]; // cloniamo array data
 
-{
-  "lt": 15,
-  "lg": 12,
-  "zoom": 5
-}
-*/
+// abbiamo creato un nuovo array che è un merge di data e lista e con l'aggiunta di due elementi in linea
+
+const merged =[...data, ...list, 7, 8]; // cloniamo array data
+
+console.log(merged);
