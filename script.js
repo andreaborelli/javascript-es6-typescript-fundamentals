@@ -5,23 +5,23 @@ const users = [
   {"id": 4, "name": "Lisa", "age": 40, "gender": "F", city: "Gorizia"}
 ];
 
-/* ES6 fornisce una serie di metodi per lavorare con gli array, uno dei più utilizzati è map,
-che ci permette di creare una nuova collezione dati, una nuova reference, una nuova locazione di memoria, 
-a partire di un array, il metodo map accetta un parametro chiamato funzione di trasformazione,
-quindi un funzione che tramite una certa sintassi ci permette di trasformare la presente collezione in un'altra,
-in particolar modo ci permetterà di andare a manipolare la presente collezione nel caso volessimo ottenere una nuova lista in cui
-abbiamo gli id */
+/* il metodo filter degli array ci permette di filtrare una collezione, 
+quindi di partire di un array e arrivare a restituire un nuovo array, 
+quindi ci restituirà una nuova collezione senza alcun riferimento alla precedente,
+andando ad iterare su ogni singola voce della collezione, 
+è andando a definire con un predicato, 
+ovvero un espressione che ci restituisce un booleano true o false, 
+se quello elemento sarà incluso nella collezione con un true oppure escluso con un false*/
 
-// const newList = users.map(function(user, index) { // il metodo map accetta un parametro chiamato funzione di trasformazione
-	 // console.log('ciao');
-  	// console.log(user);
-
- // return user.id;
-//}); 
-/* map andrà ad iterare ogni elemento della nostra collezione e ci permetterà di effettuare un operazione all'interno */
+//const newList = users.filter(user =>{
+	// return user.age > 18;
+// })
 
 
-const newList = users.map( user => `${user.name}  (${user.age})`);
-  //return user.name + '(' + user.age + ')';
- 
-	 console.log(newList); // ["Silvia(2)", "Fabio(40)", "Lorenzo(6)", "Lisa(40)"]
+const newList = users.filter(user => user.age > 18)
+					.map(user => user.id); // per ogni elemento filtrato a noi interessa esclusivamente l'id
+// anche il map ci permette di iterare sugli elementi filtrati  
+
+// risultato sarà un array solo con gli id che corrispondono alla nostra condizione user.age > 18
+
+console.log(newList); // [2, 4]
