@@ -1,39 +1,27 @@
-// 1 modo di scrittura funzione
-/*function add(a, b){
-/* return 'Hello';
-  return a + b;
-}
-add();
-console.log(add(3, 4));*/
+const users = [
+  {"id": 1, "name": "Silvia", "age": 2, "gender": "F", city: "Gorizia"},
+  {"id": 2, "name": "Fabio", "age": 40, "gender": "M", city: "Trieste"},
+  {"id": 3, "name": "Lorenzo", "age": 6, "gender": "M", city: "Pordenone"},
+  {"id": 4, "name": "Lisa", "age": 40, "gender": "F", city: "Gorizia"}
+];
 
-// 2 modo di scrittura funzione associandola ad una variabile
-/* var add = function addOperation(a, b){
-  return a + b;
-}
-add();
-console.log(add(3, 4));*/
+/* ES6 fornisce una serie di metodi per lavorare con gli array, uno dei più utilizzati è map,
+che ci permette di creare una nuova collezione dati, una nuova reference, una nuova locazione di memoria, 
+a partire di un array, il metodo map accetta un parametro chiamato funzione di trasformazione,
+quindi un funzione che tramite una certa sintassi ci permette di trasformare la presente collezione in un'altra,
+in particolar modo ci permetterà di andare a manipolare la presente collezione nel caso volessimo ottenere una nuova lista in cui
+abbiamo gli id */
 
-/* una funzione arrow è una funzione nella quale abbiamo 
-omesso la parola chiave function, 
-è abbiamo utilizzato dopo i parametri i segni di => per indicare una freccia, 
-il vantaggio è quello di essere una sintassi più coincisa, 
-ci permette dei vantaggi per l'utilizzo del this  */
+// const newList = users.map(function(user, index) { // il metodo map accetta un parametro chiamato funzione di trasformazione
+	 // console.log('ciao');
+  	// console.log(user);
 
-const add = (a, b) => {
-  return a + b;
-}
+ // return user.id;
+//}); 
+/* map andrà ad iterare ogni elemento della nostra collezione e ci permetterà di effettuare un operazione all'interno */
 
-/* const divide = (a, b) => { 
-  return a / b; 
-} */
-/* quando il blocco di istruzioni ha solo una righa, 
-possiamo portare la riga in linea, togliere il return e le {}  */
 
-const divide = (a, b) =>  a / b; // il return sarà implicito
-
-const pow = a => a * a; /* con un solo parametro possiamo omettere ' togliere ' le parentesi () in (a) 
-						così l'istruzione diventa ancora più coincisa */
-const greetings = () => console.log('Hello'); /* se non ci sono parametri nella funzione possiamo lasciare le () vuote, 
-												in alcuni casi invece di trovare le () possiamo trovare underscore _ */
-greetings(); // chiamo la funzione
-console.log(pow(4)); // 16
+const newList = users.map( user => `${user.name}  (${user.age})`);
+  //return user.name + '(' + user.age + ')';
+ 
+	 console.log(newList); // ["Silvia(2)", "Fabio(40)", "Lorenzo(6)", "Lisa(40)"]
