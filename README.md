@@ -9,7 +9,17 @@ Exercises from the Javascript ES6 and TypeScript Fundamentals course - part of t
 - **Template literals: stringhe multiline con espressioni**
 - **Short Object syntax**
 - **Destructuring Array**
-- 
+- **Destructuring Object - part 1**
+- **Destructuring Object - part 2: nested props**
+- **Destructuring Object - part 3: rename & short object syntax**
+- **Array Spread operator: clone, merge e modifica array**
+- **Object Spread operator vs Object.assign**
+- **Arrow function**
+- **Array: map**
+- **Array: filter**
+- **Array: find & findIndex**
+- **Immutabilità in ES6, React, Angular, Redux**
+- **Classes, Ereditarietà e lexical this**
 
 ### Steps
 
