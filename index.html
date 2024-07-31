@@ -16,44 +16,26 @@
   <div id="output"></div>
   
 
-  <script src="script.js"></script>
-  
-  <script>
-    const a = 1;
-    console.log(a);
+  <script  type="module" src="utility.js"></script>
+  <script  type="module" src="main.js"></script>
 
-    class Pippo {
-
-      hello() {
-        console.log('Hello');
-      }
-
-    }
-    const p = new Pippo(); // Instanzio la classe Pippo
-    p.hello();
-    
-
-
-  </script>
 
 
 
 </body>
 </html>
 
-<!-- come sfruttare npm per creare un piccolo progetto tramite il quale utilizziamo ES6, 
-   ma soprattutto avviare il file HTML all'interno di un browser ed effettuare il live reload automatico 
-   (modifica ed aggiornamento automatico browser) tutto grazie all'installazione del pacchetto lite server, 
-   che ci fornisce una semplificazione a zero configurazione in maniera semplice e veloce. 
-   che in realtà dietro le quinte usa il modulo browser sync che permette appunto di avere un web server,
-   di sincronizzare la preview di diversi device e browser simultaneamente ecc.
-    1) inanzitutto creiamo il file package.json tramite l'istruzione 
-    ' npm init '  
-    package name: NOME PROGETTO
-    version: (1.0.0) 0.0.1 
-    description: 
-    entry point: ecc... con INVIO 
-    Infine Is this OK? (yes) y E INVIO 
-    
-    2) Dopodichè va installata la libreria lite server tramite l'istruzione ' npm install lite-server '
-    aggingere un comando "start": "lite-server" in scripts nel file package.json per avvire lite server con npm start -->
+<!--  in ES6 invece di src ed avere valori globali, con possibilità di conflitti, 
+  in ES6 abbiamo la possibilità di utilizzare i moduli che sono dei file javascript gestiti in maniera diversa, 
+  in pratica il contesto del file rimane isolato rispetto al resto dell'applicazione.
+  es. il valore di una variabile presente in un file con src="utility.js" richiamamdolo in 
+  <script>
+        console.log(a);
+  </script>  vedremo il dato di a in console, altrimenti aggiungendo type="module" così <script  type="module" src="utility.js"></script>
+in console avremmo un errore -->
+
+<!-- per accedere da un modulo al contenuto di un'altro modulo quindi di un'altro file, 
+ es. da utility a main,  
+ in utility scriviamo export const a = 1, 
+ in main scriviamo import { a } from './utility.js';  e facciamo anche il print di a
+ con console.log(a);-->
