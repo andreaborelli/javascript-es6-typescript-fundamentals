@@ -1,6 +1,6 @@
-import { add } from './utility.js';
-import { add as newAdd } from './operations.js';
+import Panel  from './utility.js';
 
-console.log(add(1, 4));
-console.log(newAdd(5));
+const p = new Panel();
 
+
+/* default, predefinito ne possiamo mettere uno per modulo è toglie le parerntesi {} da import*/
