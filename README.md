@@ -21,7 +21,7 @@ Exercises from the Javascript ES6 and TypeScript Fundamentals course - part of t
 - **Immutabilità in ES6, React, Angular, Redux**
 - **Classes, Ereditarietà e lexical this**
 
-- [TypeScript: fundamentals]([https://github.com/andreaborelli/typescript-playground](https://github.com/andreaborelli/typescript-playground/tree/typescript-playground)
+- [TypeScript: fundamentals](https://github.com/andreaborelli/typescript-playground/tree/typescript-playground)
 
 ### Steps
 
