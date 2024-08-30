@@ -20,6 +20,12 @@ Exercises from the Javascript ES6 and TypeScript Fundamentals course - part of t
 - **Array: find & findIndex**
 - **Immutabilità in ES6, React, Angular, Redux**
 - **Classes, Ereditarietà e lexical this**
+- **Creazione progetto ES6 con webserver e npm**
+- ** Hello ES6: il tag "script"**
+- **Import modules e type="module"**
+- **Import as**
+- ** Import default**
+- **Promises**
 
 - [TypeScript: fundamentals](https://github.com/andreaborelli/typescript-playground/tree/typescript-playground)
 
